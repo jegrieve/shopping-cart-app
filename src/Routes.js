@@ -1,6 +1,5 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import App from './App';
 import Navbar from './components/Navbar';
 import Homepage from './components/Homepage';
 import Shop from './components/Shop';
@@ -12,10 +11,9 @@ const Routes = () => {
     <BrowserRouter>
       <Navbar />
       <Switch>
-        {/* <Route exact path="/" component={App} /> */}
         <Route exact path="/" component={Homepage} />
         <Route exact path="/shop" component={Shop} />
-        <Route exact path="/cart" component={Cart} /> */}
+        <Route exact path="/cart" component={Cart} />
       </Switch>
     </BrowserRouter>
   );
