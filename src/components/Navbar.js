@@ -1,18 +1,20 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import '../stylesheets/Navbar.css';
 
-const Navbar = () => {
+const Navbar = (props) => {
   return (
     <nav className="navbar navbar-light bg-light">
-      <a className="navbar-brand" href="/">
+      <Link to="/" className="navbar-brand">
         Home
-      </a>
-      <a className="navbar-brand" href="shop">
+      </Link>
+      <Link to="/shop" className="navbar-brand">
         Shop
-      </a>
-      <a className="navbar-brand" href="cart">
+      </Link>
+      <Link to="/cart" className="navbar-brand">
+        {props.count}
         Cart
-      </a>
+      </Link>
     </nav>
   );
 };

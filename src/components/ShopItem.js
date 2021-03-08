@@ -9,7 +9,12 @@ const ShopItem = (props) => {
         <div className="item-breed">{props.itemObj.breed}</div>
         <div className="item-price d-flex justify-content-around">
           <span className="item-price">{props.itemObj.price}</span>
-          <button className="btn btn-outline-success">Add to cart</button>
+          <button
+            onClick={props.incrementCount}
+            className="btn btn-outline-success"
+          >
+            Add to cart
+          </button>
         </div>
       </div>
     </div>
