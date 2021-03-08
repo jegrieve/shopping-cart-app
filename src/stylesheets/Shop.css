@@ -1,0 +1,16 @@
+.shop-item {
+  margin-top: 25px;
+  /* margin-bottom: 50px; */
+}
+
+.shop-item-info {
+  font-size: 22px;
+  color: rgb(85, 84, 84);
+  font-weight: bold;
+  text-align: center;
+}
+
+.item-price {
+  padding-top: 2px;
+  color: grey;
+}

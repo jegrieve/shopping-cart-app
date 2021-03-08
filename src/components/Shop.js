@@ -6,7 +6,7 @@ import '../stylesheets/Shop.css';
 const Shop = (props) => {
   let shopItems = ShopData;
   return (
-    <div className="d-flex flex-wrap">
+    <div className="d-flex flex-wrap justify-content-around container-fluid">
       {shopItems.map((itemObj, i) => {
         return (
           <div key={i}>
