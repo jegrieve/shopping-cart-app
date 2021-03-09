@@ -8,7 +8,7 @@ const ShopItem = (props) => {
       <div className="shop-item-info">
         <div className="item-breed">{props.itemObj.breed}</div>
         <div className="item-price d-flex justify-content-around">
-          <span className="item-price">{props.itemObj.price}</span>
+          <span className="item-price">${props.itemObj.price}</span>
           <button
             onClick={() => {
               props.incrementCount();
