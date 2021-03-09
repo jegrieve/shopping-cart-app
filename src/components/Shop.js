@@ -13,12 +13,7 @@ const Shop = (props) => {
         {shopItems.map((itemObj, i) => {
           return (
             <div key={i}>
-              <ShopItem
-                incrementCount={props.incrementCount}
-                id={i}
-                itemObj={itemObj}
-                addToCart={props.addToCart}
-              />
+              <ShopItem id={i} itemObj={itemObj} addToCart={props.addToCart} />
             </div>
           );
         })}

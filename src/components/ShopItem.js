@@ -11,7 +11,6 @@ const ShopItem = (props) => {
           <span className="item-price">${props.itemObj.price}</span>
           <button
             onClick={() => {
-              props.incrementCount();
               props.addToCart(props.id);
             }}
             className="btn btn-outline-success"

@@ -4,18 +4,18 @@ import CartItem from './CartItem';
 import '../stylesheets/Cart.css';
 
 const Cart = (props) => {
+  ShopData.forEach((item) => {
+    item.count = 0;
+  });
   let subTotal = 0;
   let uniqueItems = [...new Set(props.cartItems)];
 
   const getItemCounts = (cartItems) => {
     cartItems.forEach((id) => {
-      if (!ShopData[id].count) {
-        ShopData[id].count = 1;
-      } else {
-        ShopData[id].count += 1;
-      }
+      ShopData[id].count += 1;
     });
   };
+
   getItemCounts(props.cartItems);
 
   return (
@@ -25,7 +25,12 @@ const Cart = (props) => {
           {uniqueItems.map((id, i) => {
             return (
               <div key={i}>
-                <CartItem id={id} />
+                <CartItem
+                  id={id}
+                  count={props.count}
+                  addToCart={props.addToCart}
+                  removeFromCart={props.removeFromCart}
+                />
               </div>
             );
           })}
@@ -39,7 +44,8 @@ const Cart = (props) => {
               </div>
             );
           })}
-          <div>Subtotal: {subTotal}</div>
+          <hr></hr>
+          <div>Subtotal: ${subTotal}</div>
         </div>
       </div>
     </div>

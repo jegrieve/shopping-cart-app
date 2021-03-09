@@ -10,23 +10,35 @@ const Routes = () => {
   const [count, setCount] = useState(0);
   const [cartItems, setCartItems] = useState([]);
 
+  useEffect(() => {
+    setCount(cartItems.length);
+  }, [cartItems]);
+
   const incrementCount = () => {
     setCount(count + 1);
+  };
+  const decrementCount = (count) => {
+    if (count >= 0) {
+      setCount(count - 1);
+    }
   };
 
   const addToCart = (id) => {
     setCartItems((cart) => [...cart, id]);
-  }; //we are gonna pass this down to each item on the button onclicks.
+  };
 
-  //So heres the plan:
-  //Click on a add to cart button, then on the shopitem button, goes up to parent using a set, which goes up to routes using set
-  //The route set then adds that item to the cart
-  //The cart then has the number incremented next to cart (Ex:   Cart (1))
-  //Then everything rerenders
-  //So i think if we pass down a prop (setEtc) from routes.js it can then update the whole app again.
+  const removeFromCart = (id) => {
+    setCartItems((cart) => {
+      let newCart = [...cart];
+      let index = cart.indexOf(id);
+      newCart.splice(index, 1);
+      return newCart;
+    });
+  };
+
   return (
     <BrowserRouter>
-      <Navbar count={count} /> {/* cartItems={cartItems} */}
+      <Navbar count={count} />
       <Switch>
         <Route exact path="/" component={Homepage} />
         <Route
@@ -43,7 +55,17 @@ const Routes = () => {
         <Route
           exact
           path="/cart"
-          render={(props) => <Cart {...props} cartItems={cartItems} />}
+          render={(props) => (
+            <Cart
+              {...props}
+              cartItems={cartItems}
+              incrementCount={incrementCount}
+              decrementCount={decrementCount}
+              addToCart={addToCart}
+              removeFromCart={removeFromCart}
+              count={count}
+            />
+          )}
         />
       </Switch>
     </BrowserRouter>
