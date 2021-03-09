@@ -12,7 +12,7 @@ const Navbar = (props) => {
         Shop
       </Link>
       <Link to="/cart" className="navbar-brand">
-        {props.count}
+        <span className="cart-count">({props.count}) </span>
         Cart
       </Link>
     </nav>

@@ -13,6 +13,11 @@ const Routes = () => {
   const incrementCount = () => {
     setCount(count + 1);
   };
+
+  const addToCart = (id) => {
+    setCartItems((cart) => [...cart, id]);
+  }; //we are gonna pass this down to each item on the button onclicks.
+
   //So heres the plan:
   //Click on a add to cart button, then on the shopitem button, goes up to parent using a set, which goes up to routes using set
   //The route set then adds that item to the cart
@@ -28,10 +33,18 @@ const Routes = () => {
           exact
           path="/shop"
           render={(props) => (
-            <Shop {...props} incrementCount={incrementCount} />
+            <Shop
+              {...props}
+              incrementCount={incrementCount}
+              addToCart={addToCart}
+            />
           )}
         />
-        <Route exact path="/cart" component={Cart} />
+        <Route
+          exact
+          path="/cart"
+          render={(props) => <Cart {...props} cartItems={cartItems} />}
+        />
       </Switch>
     </BrowserRouter>
   );
