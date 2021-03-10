@@ -20,34 +20,38 @@ const Cart = (props) => {
 
   return (
     <div className="container-fluid">
-      <div className="row">
-        <div className="col-6">
-          {uniqueItems.map((id, i) => {
-            return (
-              <div key={i}>
-                <CartItem
-                  id={id}
-                  count={props.count}
-                  addToCart={props.addToCart}
-                  removeFromCart={props.removeFromCart}
-                />
-              </div>
-            );
-          })}
+      {props.count > 0 ? (
+        <div className="row">
+          <div className="col-6">
+            {uniqueItems.map((id, i) => {
+              return (
+                <div key={i}>
+                  <CartItem
+                    id={id}
+                    count={props.count}
+                    addToCart={props.addToCart}
+                    removeFromCart={props.removeFromCart}
+                  />
+                </div>
+              );
+            })}
+          </div>
+          <div className="col-6">
+            {uniqueItems.map((id, i) => {
+              subTotal += Number(ShopData[id].price) * ShopData[id].count;
+              return (
+                <div key={i}>
+                  ${Number(ShopData[id].price) * ShopData[id].count}
+                </div>
+              );
+            })}
+            <hr></hr>
+            <div>Subtotal: ${subTotal}</div>
+          </div>
         </div>
-        <div className="col-6">
-          {uniqueItems.map((id, i) => {
-            subTotal += Number(ShopData[id].price) * ShopData[id].count;
-            return (
-              <div key={i}>
-                ${Number(ShopData[id].price) * ShopData[id].count}
-              </div>
-            );
-          })}
-          <hr></hr>
-          <div>Subtotal: ${subTotal}</div>
-        </div>
-      </div>
+      ) : (
+        <div>Your cart is empty!</div>
+      )}
     </div>
   );
 };
