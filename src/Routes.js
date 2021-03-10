@@ -40,6 +40,7 @@ const Routes = () => {
     <BrowserRouter>
       <Navbar count={count} />
       <Switch>
+        <Route component={Homepage} />
         <Route exact path="/" component={Homepage} />
         <Route
           exact
