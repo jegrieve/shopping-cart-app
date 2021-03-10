@@ -5,8 +5,7 @@ import '../stylesheets/Shop.css';
 
 const Shop = (props) => {
   let shopItems = ShopData;
-  //Need to create state that has cartItems
-  //Then when we add something to cart we add that item here.
+
   return (
     <div>
       <div className="d-flex flex-wrap justify-content-around container-fluid">

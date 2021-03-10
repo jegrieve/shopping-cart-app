@@ -40,33 +40,25 @@ const Cart = (props) => {
             {uniqueItems.map((id, i) => {
               subTotal += Number(ShopData[id].price) * ShopData[id].count;
               return (
-                <div key={i}>
+                <div className="item-prices" key={i}>
                   ${Number(ShopData[id].price) * ShopData[id].count}
                 </div>
               );
             })}
             <hr></hr>
-            <div>Subtotal: ${subTotal}</div>
+            <div className="subtotal-price">Subtotal: ${subTotal}</div>
           </div>
         </div>
       ) : (
-        <div>Your cart is empty!</div>
+        <div class="jumbotron jumbotron-fluid">
+          <div class="container">
+            <h1 class="display-4">Your cart is currently empty.</h1>
+            <p class="lead">Please buy something :)</p>
+          </div>
+        </div>
       )}
     </div>
   );
 };
 
 export default Cart;
-//what i will do next
-//display each item
-//each item should only display once with count next
-//to it.
-//then we can increment or decrement (to 0) the count
-//also display total prices next to items
-//display subtotal
-//finally do homepage then done
-//going to go through the array and count
-//each time one of the items is in the array
-//then i will set the data.count on that itemdataobj
-//then pass that into the array and u can change it?
-//have to do this from the top(same increment, add decrement)
