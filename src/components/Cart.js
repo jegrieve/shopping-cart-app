@@ -47,6 +47,9 @@ const Cart = (props) => {
             })}
             <hr></hr>
             <div className="subtotal-price">Subtotal: ${subTotal}</div>
+            <div>
+              <button className="buy-btn btn btn-warning">Buy Now</button>
+            </div>
           </div>
         </div>
       ) : (
