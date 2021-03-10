@@ -1,0 +1,40 @@
+{
+  "files": {
+    "main.css": "/shopping-cart-app/static/css/main.a54d0ffa.chunk.css",
+    "main.js": "/shopping-cart-app/static/js/main.1a6493ee.chunk.js",
+    "main.js.map": "/shopping-cart-app/static/js/main.1a6493ee.chunk.js.map",
+    "runtime-main.js": "/shopping-cart-app/static/js/runtime-main.e7f015c5.js",
+    "runtime-main.js.map": "/shopping-cart-app/static/js/runtime-main.e7f015c5.js.map",
+    "static/css/2.fabbef47.chunk.css": "/shopping-cart-app/static/css/2.fabbef47.chunk.css",
+    "static/js/2.96527c4a.chunk.js": "/shopping-cart-app/static/js/2.96527c4a.chunk.js",
+    "static/js/2.96527c4a.chunk.js.map": "/shopping-cart-app/static/js/2.96527c4a.chunk.js.map",
+    "index.html": "/shopping-cart-app/index.html",
+    "static/css/2.fabbef47.chunk.css.map": "/shopping-cart-app/static/css/2.fabbef47.chunk.css.map",
+    "static/css/main.a54d0ffa.chunk.css.map": "/shopping-cart-app/static/css/main.a54d0ffa.chunk.css.map",
+    "static/js/2.96527c4a.chunk.js.LICENSE.txt": "/shopping-cart-app/static/js/2.96527c4a.chunk.js.LICENSE.txt",
+    "static/media/australian-shepherd.3e056852.jpg": "/shopping-cart-app/static/media/australian-shepherd.3e056852.jpg",
+    "static/media/beagle.f34755f2.jpg": "/shopping-cart-app/static/media/beagle.f34755f2.jpg",
+    "static/media/bernese-mountain-dog.7e70c2dc.jpg": "/shopping-cart-app/static/media/bernese-mountain-dog.7e70c2dc.jpg",
+    "static/media/cairn-terrier.9cfc793f.jpg": "/shopping-cart-app/static/media/cairn-terrier.9cfc793f.jpg",
+    "static/media/dachshund.91522acb.jpg": "/shopping-cart-app/static/media/dachshund.91522acb.jpg",
+    "static/media/dalmatian.6f4f21d0.jpg": "/shopping-cart-app/static/media/dalmatian.6f4f21d0.jpg",
+    "static/media/english-setter.063476c4.jpg": "/shopping-cart-app/static/media/english-setter.063476c4.jpg",
+    "static/media/french-bulldog.7e3d4d9d.jpg": "/shopping-cart-app/static/media/french-bulldog.7e3d4d9d.jpg",
+    "static/media/golden-retriever.b97b4e17.jpg": "/shopping-cart-app/static/media/golden-retriever.b97b4e17.jpg",
+    "static/media/homepage-logo.f5712b59.png": "/shopping-cart-app/static/media/homepage-logo.f5712b59.png",
+    "static/media/labrador-retriever.29b8cc0e.jpg": "/shopping-cart-app/static/media/labrador-retriever.29b8cc0e.jpg",
+    "static/media/pembroke-welsh-corgi.f54660b4.jpg": "/shopping-cart-app/static/media/pembroke-welsh-corgi.f54660b4.jpg",
+    "static/media/pit-bull.ae64d257.jpg": "/shopping-cart-app/static/media/pit-bull.ae64d257.jpg",
+    "static/media/shetland-sheep-dog.e797e155.jpg": "/shopping-cart-app/static/media/shetland-sheep-dog.e797e155.jpg",
+    "static/media/index.css": "/shopping-cart-app/static/media/shop-background.e01c5dd8.jpg",
+    "static/media/siberian-husky.f8aa2acc.jpg": "/shopping-cart-app/static/media/siberian-husky.f8aa2acc.jpg",
+    "static/media/yorkshire-terrier.caf3e672.jpg": "/shopping-cart-app/static/media/yorkshire-terrier.caf3e672.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e7f015c5.js",
+    "static/css/2.fabbef47.chunk.css",
+    "static/js/2.96527c4a.chunk.js",
+    "static/css/main.a54d0ffa.chunk.css",
+    "static/js/main.1a6493ee.chunk.js"
+  ]
+}
